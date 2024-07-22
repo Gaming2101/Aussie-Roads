@@ -1,0 +1,558 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1527217260726901659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2650684711078614636}
+  - component: {fileID: 2967943980034067983}
+  - component: {fileID: 3378673183582219399}
+  - component: {fileID: 3631157288121723336}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2650684711078614636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527217260726901659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 52.295143, y: 4.8700747, z: -343.22882}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3673253863925264184}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2967943980034067983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527217260726901659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418262753580a8148b66e0810c29fceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  damageCaused: 0
+  maxDamageCaused: 25
+  skipMessage: {fileID: 1876690288279415331, guid: 69113316a6260a34fa3a275a3b88eb1c,
+    type: 3}
+  introMessage: {fileID: 1876690288279415331, guid: ee6374db83c68da46adbf873801f1f82,
+    type: 3}
+  enterCarEffect: {fileID: 1876690288279415331, guid: 0bad450f4e3b2da47b218d57279cd296,
+    type: 3}
+  objectiveHint: {fileID: 1876690288279415331, guid: 4e7c27fded39284459da11e075116039,
+    type: 3}
+  fadeInMessage: {fileID: 1876690288279415331, guid: 9a1054820ab199645b7d3ef3fa3edfea,
+    type: 3}
+  fadeOutMessage: {fileID: 1876690288279415331, guid: 8800b56f68d91a846a9b4c0d2e587a5b,
+    type: 3}
+  failMessage: {fileID: 1876690288279415331, guid: 36037fd2385ede7448b6e9f0e41f2e7a,
+    type: 3}
+  succeedMessage: {fileID: 1876690288279415331, guid: 54bd573d12f61fd40a053b824429bcf7,
+    type: 3}
+  crashMessage: {fileID: 1876690288279415331, guid: 373a3c94ac5928745ad0f4429ed3ebb6,
+    type: 3}
+  started: 0
+  over: 0
+  succeded: 0
+  timeScale: 0
+  startT: 0
+  skipAble: 0
+  additionTrafficRange: 200
+  HUD: {fileID: 0}
+  mainMenu: {fileID: 0}
+  blocker: {fileID: 0}
+  startPos: {x: 0, y: 0, z: 0}
+--- !u!114 &3378673183582219399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527217260726901659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de9d8a82ac3dfd48897b7059926c252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minutes: 1
+  seconds: 40
+  realMinutes: 5
+  realSeconds: 0
+  late: 0
+  over: 0
+--- !u!114 &3631157288121723336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527217260726901659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aad8565afc60048958c2af40c80e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversations:
+  - name: Intro
+    conversations:
+    - conversation:
+      - subtitle: Yo dude
+        clip: {fileID: 8300000, guid: ca714e93dbf88db49b80776b8d755de2, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Yeah, sup?
+        clip: {fileID: 8300000, guid: 99656adddde47df4da391467a874acbe, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: There be a party on tonight!
+        clip: {fileID: 8300000, guid: c61e43378034e5349a568360b11552cf, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Sick Bro
+        clip: {fileID: 8300000, guid: d6d285ee263552a4891f907cd6f5f2b2, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Oh damn, bro says it starts at 6
+        clip: {fileID: 8300000, guid: 7168696a7dbab02428d8f4798cc18a33, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Man, it about to be 6!
+        clip: {fileID: 8300000, guid: 43fdcab4a873c6e47a478e1babd15ae5, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Jesus, we gotta get there ASAP!
+        clip: {fileID: 8300000, guid: 4a1f4cb30e2a4304b9fff7fefcf2f8a3, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Hell, we gonna be late!
+        clip: {fileID: 8300000, guid: 7b4f21f551aebc343aa4ec94ca97dc78, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Step on it man, floor it!
+        clip: {fileID: 8300000, guid: 45882779c63d255479ae30b354be4ae6, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+  - name: Late
+    conversations:
+    - conversation:
+      - subtitle: Damn bro, we late now dude!
+        clip: {fileID: 8300000, guid: b1946d758d8dfc0468a72e26a2f0c012, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: For real man?!
+        clip: {fileID: 8300000, guid: a381a98cb545a0744b4e6aa7089dd159, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Damn bro
+        clip: {fileID: 8300000, guid: 68e97baa09079cc47ba23f064becd5ec, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: It be alright man. Better be late than never, yo
+        clip: {fileID: 8300000, guid: 14957dfaeea77404e917d63d40287666, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Ya feel me?
+        clip: {fileID: 8300000, guid: 58f3792798553b14cb5a8bac6b756171, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+  - name: Failed
+    conversations:
+    - conversation:
+      - subtitle: Bro what the hell took so long!
+        clip: {fileID: 8300000, guid: 4a142dcb98d63df4ca478e58d9f6e796, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: We late for real now!
+        clip: {fileID: 8300000, guid: 3e8cebace43fde544ae5958efc1b75df, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Man, I'm trying
+        clip: {fileID: 8300000, guid: 78ce26aceb4e941419691f6be9aafa82, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Na na, forget about it now man. We missed it now!
+        clip: {fileID: 8300000, guid: 602c66467c6c0774fa05cd7d2064a403, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+  - name: Crash
+    conversations:
+    - conversation:
+      - subtitle: Aye watch the road man!
+        clip: {fileID: 8300000, guid: ab3a38194db5c604c9428a35a77dfcf8, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Stop it, I didn't see that thing bro
+        clip: {fileID: 8300000, guid: 75c976cee69061343830bf47b1b14095, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+    - conversation:
+      - subtitle: Hell, watch it dude!
+        clip: {fileID: 8300000, guid: 96b56a8fa4839b14ca0944a51e73d290, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Shut it
+        clip: {fileID: 8300000, guid: 69a27e0445bd6a147865ec59515dff03, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+    - conversation:
+      - subtitle: Are you blind!
+        clip: {fileID: 8300000, guid: ed4084e49560d9b4db1bb1b4729bb964, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Didn't see that bro
+        clip: {fileID: 8300000, guid: 850f5e9a73c021b41a38e82f7502a271, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+    - conversation:
+      - subtitle: You're a maniac!
+        clip: {fileID: 8300000, guid: 44f16db8a84545d4ab901a863ca4e027, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Na bro
+        clip: {fileID: 8300000, guid: c486792874e67f94a807b5b753be7285, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+  - name: Hard Crash
+    conversations:
+    - conversation:
+      - subtitle: Hey, what the hell man!
+        clip: {fileID: 8300000, guid: 3e532eccda5919849b84bb172321ecb8, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Focus! alright!
+        clip: {fileID: 8300000, guid: 43bf3c1929c8eac4aaf7ecca1612465b, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+    - conversation:
+      - subtitle: You tryna get us killed man!
+        clip: {fileID: 8300000, guid: a2d36eed84e2e4b4084d37a3b07295e1, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Stop driving with your eyes closed!
+        clip: {fileID: 8300000, guid: 8bafdf7dbe84d654e817f9228a2792bc, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+  - name: Death
+    conversations:
+    - conversation:
+      - subtitle: Ahhh! Noo!
+        clip: {fileID: 8300000, guid: e2f2d36fd1956ea4da95e9695b4b01e1, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Damn it!!!
+        clip: {fileID: 8300000, guid: 525f9dbd424eb394793674b73fdb076e, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Mummy!
+        clip: {fileID: 8300000, guid: 99d8d7df9b232004ca4f8efdb7e804a5, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+    - conversation:
+      - subtitle: Ahhhh!
+        clip: {fileID: 8300000, guid: 89f743d9c2ec45f4589da2c0de8a9bed, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Nooo!
+        clip: {fileID: 8300000, guid: b13dab153c29bee4c9dc3ef8e34218fe, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+    - conversation:
+      - subtitle: Helppp!
+        clip: {fileID: 8300000, guid: e500e375282cb0543bacc87c81a12811, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Damn it!
+        clip: {fileID: 8300000, guid: 57686b78848a018478cfc6707b337e73, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+  - name: Succeed
+    conversations:
+    - conversation:
+      - subtitle: Aye bro, we did that G!
+        clip: {fileID: 8300000, guid: 0931a021411c18d46a664af68a4cf4da, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Yeah man!
+        clip: {fileID: 8300000, guid: d5a1a4f8447d8a84cbc530f14ce2eacd, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Love ya bro
+        clip: {fileID: 8300000, guid: 4723e035855fa584fba21df9a7c9660c, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+  conversationsOld:
+  - name: Intro
+    conversations:
+    - conversation:
+      - subtitle: Yo Nigga
+        clip: {fileID: 8300000, guid: ba236f33839cd884e8af8282c1ce8c04, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Yeah, sup?
+        clip: {fileID: 8300000, guid: 16b38b774c5ebbc4cbf9a241e3876747, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: There be a party on tonight
+        clip: {fileID: 8300000, guid: d1f6e459b159cd44f8be12f5e5ee359e, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Dardy Cunt
+        clip: {fileID: 8300000, guid: d0b726b388f4e164fb93549dca31edc9, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Oh shit, bro says it starts at 6
+        clip: {fileID: 8300000, guid: 2e44220b236af5f4d9a9f0834c279192, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Nigga, it about to be 6!
+        clip: {fileID: 8300000, guid: 622caa230cb2a734688755c2f987adc1, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Shit cunt, we gotta get there nigga!
+        clip: {fileID: 8300000, guid: d0b726b388f4e164fb93549dca31edc9, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Fuck nigga, we gonna be late!
+        clip: {fileID: 8300000, guid: d1f6e459b159cd44f8be12f5e5ee359e, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+  - name: Late
+    conversations:
+    - conversation:
+      - subtitle: Fuck bro we late now nigga!
+        clip: {fileID: 8300000, guid: ba236f33839cd884e8af8282c1ce8c04, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: For real cunt?!
+        clip: {fileID: 8300000, guid: d0b726b388f4e164fb93549dca31edc9, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Damn bro
+        clip: {fileID: 8300000, guid: d0b726b388f4e164fb93549dca31edc9, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: It be alright cuz. Better a nigga be late then never, yo
+        clip: {fileID: 8300000, guid: d1f6e459b159cd44f8be12f5e5ee359e, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Ya feel me?
+        clip: {fileID: 8300000, guid: 2e44220b236af5f4d9a9f0834c279192, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+  - name: Failed
+    conversations:
+    - conversation:
+      - subtitle: Cunt what the fuck took so long!
+        clip: {fileID: 8300000, guid: 2e44220b236af5f4d9a9f0834c279192, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Nigga we late for real
+        clip: {fileID: 8300000, guid: d1f6e459b159cd44f8be12f5e5ee359e, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Man, I'm trying
+        clip: {fileID: 8300000, guid: ba236f33839cd884e8af8282c1ce8c04, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Na na, fuck dat shit nigga. We missed dat shit now fam!
+        clip: {fileID: 8300000, guid: 16b38b774c5ebbc4cbf9a241e3876747, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+  - name: Crash
+    conversations:
+    - conversation:
+      - subtitle: Ay watch the road nigga!
+        clip: {fileID: 8300000, guid: d1f6e459b159cd44f8be12f5e5ee359e, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Fuck off, I didn't see dat shit bro
+        clip: {fileID: 8300000, guid: 2e44220b236af5f4d9a9f0834c279192, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+    - conversation:
+      - subtitle: Fuck, watch it nigga!
+        clip: {fileID: 8300000, guid: d1f6e459b159cd44f8be12f5e5ee359e, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Fuck off
+        clip: {fileID: 8300000, guid: 2e44220b236af5f4d9a9f0834c279192, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+    - conversation:
+      - subtitle: Are you fucking blind!
+        clip: {fileID: 8300000, guid: d1f6e459b159cd44f8be12f5e5ee359e, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Didn't see that bro
+        clip: {fileID: 8300000, guid: 2e44220b236af5f4d9a9f0834c279192, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+    - conversation:
+      - subtitle: You're a maniac!
+        clip: {fileID: 8300000, guid: d1f6e459b159cd44f8be12f5e5ee359e, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Na bro
+        clip: {fileID: 8300000, guid: 2e44220b236af5f4d9a9f0834c279192, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+  - name: Hard Crash
+    conversations:
+    - conversation:
+      - subtitle: Hey what the fuck cunt!
+        clip: {fileID: 8300000, guid: d0b726b388f4e164fb93549dca31edc9, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Focus! aight nigga!
+        clip: {fileID: 8300000, guid: d1f6e459b159cd44f8be12f5e5ee359e, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+    - conversation:
+      - subtitle: You trynna get us killed nigga!
+        clip: {fileID: 8300000, guid: d0b726b388f4e164fb93549dca31edc9, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Stop driving with your eyes closed!
+        clip: {fileID: 8300000, guid: d1f6e459b159cd44f8be12f5e5ee359e, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+  - name: Death
+    conversations:
+    - conversation:
+      - subtitle: Ahhh Fuck Cunt!
+        clip: {fileID: 8300000, guid: ba236f33839cd884e8af8282c1ce8c04, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Nigga!!!
+        clip: {fileID: 8300000, guid: 622caa230cb2a734688755c2f987adc1, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Mummy!
+        clip: {fileID: 8300000, guid: 2e44220b236af5f4d9a9f0834c279192, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+    - conversation:
+      - subtitle: Ahhhh!
+        clip: {fileID: 8300000, guid: ba236f33839cd884e8af8282c1ce8c04, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Nooo!
+        clip: {fileID: 8300000, guid: 622caa230cb2a734688755c2f987adc1, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+    - conversation:
+      - subtitle: Helppp!
+        clip: {fileID: 8300000, guid: ba236f33839cd884e8af8282c1ce8c04, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Damn it!
+        clip: {fileID: 8300000, guid: 622caa230cb2a734688755c2f987adc1, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+  - name: Succeed
+    conversations:
+    - conversation:
+      - subtitle: Aye nigga, we did that shit G!
+        clip: {fileID: 8300000, guid: ba236f33839cd884e8af8282c1ce8c04, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+      - subtitle: Yeah nigga!
+        clip: {fileID: 8300000, guid: 622caa230cb2a734688755c2f987adc1, type: 3}
+        DialogueSpeaker: 0
+        lengthModifier: 0
+      - subtitle: Love ya bro, no homo
+        clip: {fileID: 8300000, guid: 2e44220b236af5f4d9a9f0834c279192, type: 3}
+        DialogueSpeaker: 1
+        lengthModifier: 0
+  alt: 0
+  currentLine: 0
+  currentConversation:
+    name: 
+    conversations: []
+  playerAudio: {fileID: 0}
+  npcAudio: {fileID: 0}
+--- !u!1 &5963139341261442321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3673253863925264184}
+  - component: {fileID: 2998472610802943444}
+  - component: {fileID: 1232414138640070229}
+  m_Layer: 5
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3673253863925264184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963139341261442321}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1867.7048, y: 1075.1299, z: 343.22882}
+  m_LocalScale: {x: 3.6, y: 3.6, z: 3.6}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2650684711078614636}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2998472610802943444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963139341261442321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!114 &1232414138640070229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963139341261442321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0

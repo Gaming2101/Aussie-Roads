@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &470222877908955837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5424657768390296353}
+  - component: {fileID: 7118712311652133471}
+  - component: {fileID: 1774551446985607891}
+  m_Layer: 0
+  m_Name: Road Spline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5424657768390296353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470222877908955837}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 101, y: 0, z: -101.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7118712311652133471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470222877908955837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab5c7d4c32e743048dfca98e2d5914f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Spline:
+    m_EditModeType: 1
+    m_Knots: []
+    m_MetaData: []
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  m_Splines:
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: 0
+        y: 0
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -1
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1
+      Rotation:
+        value:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+    - Position:
+        x: -90
+        y: 0
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -1
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1
+      Rotation:
+        value:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+    m_MetaData:
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  m_Knots:
+    m_KnotsLink: []
+--- !u!114 &1774551446985607891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470222877908955837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc9d38d85bfe914097a2bc7b8bbdc5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  traffic:
+  - {fileID: -8164165108482492010, guid: 609685338c550eb4492cd1330fda1da4, type: 3}
+  - {fileID: 4972360319625493692, guid: 3433a6bfe0d46fd41a28e9f25f24b4c2, type: 3}
+  - {fileID: 7692233946512780835, guid: c396ed48c70656140b38393115780386, type: 3}
+  - {fileID: -2861905966445896780, guid: 4d97f7766870a4b48b26985ed22f4c2b, type: 3}
+  - {fileID: -3209478044207714163, guid: 8600dc87ea05ca24c92294f3d10005f9, type: 3}
+  - {fileID: -4825402763532077864, guid: 8df55dfadc4435147a66489c38e60fb3, type: 3}
+  - {fileID: 6199452859164041694, guid: f12b2c2f00e46b14eb6b2c983a444833, type: 3}
+  - {fileID: -6862008121984952477, guid: e3c93d030544bdf4b9e8305b436fcff3, type: 3}
+  - {fileID: 4761456845384707177, guid: a1e8f0d4ad2dfde459e1ecb3745eaf1d, type: 3}
+  - {fileID: 5551182945724179867, guid: 7f1745786fdf50d4d82a7abe2c896723, type: 3}
+  - {fileID: -6632883127286560394, guid: 66ee9fd59cd041e42b8b43969db60dbb, type: 3}
+  - {fileID: 4186267653698281033, guid: 81fa2bd117d9d744e9e919608cc8017f, type: 3}
+  - {fileID: -5466771212045490595, guid: 1a30c9da1665ba7468ae978a2fb7a777, type: 3}
+  - {fileID: 676560065002432063, guid: 02d552b782a8f7841a95bc3964acdd2f, type: 3}
+  - {fileID: -3425535957994566275, guid: 38f6ab1b89783a94eaece073af3a1adc, type: 3}
+  - {fileID: -6987150632295319915, guid: 24e1888381384c34eb64b9e5be162b7d, type: 3}
+  - {fileID: 4802079616379553639, guid: d631a630f82c9ae4abb456cf268ed257, type: 3}
+  - {fileID: -3512441922866192312, guid: 41e75290fbd64044bafe6d216fa12a3c, type: 3}
+  - {fileID: -1940167175149244215, guid: 8f00e18cd1a031f4ab1c5bf4d997a377, type: 3}
+  - {fileID: 5646466650970287453, guid: f5dd5eba11aedea4199f18e1d5c2ee0d, type: 3}
+  - {fileID: -1547331374717350672, guid: 85e5f2c29f1f45d4d90d115c6da3e644, type: 3}
+  - {fileID: 5733425527796749988, guid: af5ddfda21b531f45ad3e98c6b7c3132, type: 3}
+  - {fileID: -4701671115784323668, guid: 9f3723e4cc29570438ff03d5cde8d9d9, type: 3}
+  - {fileID: 566466304849698122, guid: c7249a65ad8017f46a7ce69bebdc0e3c, type: 3}
+  - {fileID: -8840558016295108157, guid: 4472ba54a6e2d3e47ba686cf59967fc0, type: 3}
+  range: 150
+  despawnRange: 300
+  maxTraffic: 25
+  spline: {fileID: 0}
+  spawnTraffic: []
+  close: 0
+  pos: {fileID: 0}
