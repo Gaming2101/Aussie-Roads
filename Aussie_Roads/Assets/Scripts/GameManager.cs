@@ -96,6 +96,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Adjusts the graphics settings
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (QualitySettings.GetQualityLevel() == 0)
+                QualitySettings.SetQualityLevel(1);
+            else
+                QualitySettings.SetQualityLevel(0);
         // Controls the main menu play button, and the skip cutscene button
         if (!succeded)
             if (IntroCameraScript.me)

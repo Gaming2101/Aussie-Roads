@@ -136,9 +136,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages:
-  - Car Crashes Are Bad Yeah
+  - The majority of car crashes involve speeding
   statistics:
-  - 1 Out Of 5 People Die From Car Crashes Bro
+  - "63%\u201D of motor vehicle crashes are fatal"
+  - "\u201C31% of deadly crashes happen on 60km/h roads"
+  - 51% of fatal crashes happen at intersections
+  - 60% of crashes happen on local roads
   mainText: {fileID: 6442326878627532666}
   statText: {fileID: 5137759664337307513}
 --- !u!225 &2645988167099782195
